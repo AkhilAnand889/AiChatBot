@@ -1,0 +1,16 @@
+{
+  "name": "aibot",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "aws-sdk": "^2.1416.0",
+    "natural": "^1.0.4",
+    "serverless-http": "^3.1.1"
+  },
+  "devDependencies": {
+    "serverless-iam-roles-per-function": "^3.2.0"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  }
+}

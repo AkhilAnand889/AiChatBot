@@ -1,0 +1,184 @@
+service: brainwave-api
+frameworkVersion: '3'
+configValidationMode: error
+
+provider:
+  name: aws
+  region: ap-south-1
+  profile: nandu
+  runtime: nodejs14.x
+  environment:
+    user_pool_id: { Ref: UserPool }
+    client_id: { Ref: UserClient }
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - cognito-idp:AdminInitiateAuth
+            - cognito-idp:GetUser
+            - cognito-idp:AdminCreateUser
+            - cognito-idp:AdminSetUserPassword
+            - cognito-idp:AdminGetUser
+            - cognito-idp:ListUsers
+            - cognito-idp:DescribeUserPool
+            - dynamodb:PutItem
+            - dynamodb:GetItem
+            - dynamodb:Scan
+            - dynamodb:DeleteItem
+            - dynamodb:Query
+            - cognito-idp:GlobalSignOut
+          Resource:
+            - "*"
+            - { "Fn::GetAtt": ["UserPool", "Arn"] }
+            - { "Fn::Join": ["", ["arn:aws:dynamodb:", { Ref: AWS::Region }, ":", { Ref: AWS::AccountId }, ":table/brainwave-chat"]] }
+
+functions:
+  loginUser:
+    handler: user/login.handler
+    events:
+      - http:
+          path: user/login
+          method: post
+          cors: true
+
+  signupUser:
+    handler: user/signup.handler
+    events:
+      - http:
+          path: user/signup
+          method: post
+          cors: true
+
+  confirmationSignUp:
+    handler: user/confirmSign.handler
+    events:
+      - http:
+          path: user/confirm
+          method: post
+          cors: true
+
+  forgotPassword:
+    handler: user/forgotPass.handler
+    events:
+      - http:
+          path: user/forgotpassword
+          method: post
+          cors: true
+
+  confirmationforgotPassword:
+    handler: user/confirmforgotPass.handler
+    events:
+      - http:
+          path: user/confirmPassword
+          method: post
+          cors: true
+
+  chatbot:
+    handler: controller/chatbot.handler
+    events:
+      - http:
+          path: controller/chatbot
+          method: post
+          cors: true
+          
+
+  getmessages: 
+    handler: controller/getRes.getMessages
+    events:
+      - http:
+          path: controller/getmessages
+          method: get
+          cors: true
+          
+
+  retrieveMessages: 
+    handler: controller/getRes.retrieveMessages
+    events:
+      - http:
+          path: controller/retrieveMessages/{userId}
+          method: get
+          cors: true
+          
+
+  getuserAttributes:
+    handler: controller/getUser.getUserAttribute
+    events:
+      - http:
+          path: controller/getuseratt
+          method: get
+          cors: true
+          
+  deleteMessage:  
+    handler: user/deletehistory.handler
+    events:
+      - http:
+          path: controller/deletemessage/{id}
+          method: delete
+          cors: true
+          
+
+  deleteAllMessage:  
+    handler: user/deletehistory.deleteAll
+    events:
+      - http:
+          path: controller/AllDeletemessage
+          method: delete
+          cors: true
+  
+  globalSignOut:
+    handler: user/globalSignOut.globalSignout
+    events:
+      - http:
+          path: user/globalSignOut
+          method: post
+          cors: true
+
+resources:
+  Resources:
+    UserPool:
+      Type: AWS::Cognito::UserPool
+      Properties:
+        UserPoolName: brainwave-chat
+        Schema:
+          - AttributeDataType: String
+            Name: email
+            Required: true
+            Mutable: true
+          - AttributeDataType: String
+            Name: given_name
+            Required: true
+            Mutable: true
+          - AttributeDataType: String
+            Name: family_name
+            Required: true
+            Mutable: true
+        Policies:
+          PasswordPolicy:
+            MinimumLength: 6
+        AutoVerifiedAttributes: ["email"]
+
+    UserClient:
+      Type: AWS::Cognito::UserPoolClient
+      Properties:
+        ClientName: user-pool-ui
+        GenerateSecret: false
+        UserPoolId: { Ref: UserPool }
+        AccessTokenValidity: 5
+        IdTokenValidity: 5
+        ExplicitAuthFlows:
+          - "ADMIN_NO_SRP_AUTH"
+
+    ChatInputsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: brainwave-chat
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5

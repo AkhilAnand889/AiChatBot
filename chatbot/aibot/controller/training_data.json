@@ -1,0 +1,426 @@
+[
+  {
+    "question": "hello",
+    "category": "greetings"
+  },
+  {
+    "question": "hi",
+    "category": "greetings"
+  },
+  {
+    "question": "what is the time",
+    "category": "time"
+  },
+  {
+    "question": "what is the place",
+    "category": "location"
+  },
+  {
+    "question": "who are you",
+    "category": "identity"
+  },
+  {
+    "question": "how are you",
+    "category": "greetings"
+  },
+  {
+    "question": "tell me a joke",
+    "category": "fun"
+  },
+  {
+    "question": "what is programming",
+    "category": "programming"
+  },
+  {
+    "question": "what is python",
+    "category": "programming"
+  },
+  {
+    "question": "what is javascript",
+    "category": "programming"
+  },
+  {
+    "question": "what is java",
+    "category": "programming"
+  },
+  {
+    "question": "how to create a website",
+    "category": "web development"
+  },
+  {
+    "question": "What is web development?",
+    "category": "web development"
+  },
+  {
+    "question": "what is frontend development.",
+    "category": "web development"
+  },
+  {
+    "question": "what is fullstack development.",
+    "category": "web development"
+  },
+  {
+    "question": "What are the key skills required for backend development?",
+    "category": "web development"
+  },
+  {
+    "question": [
+      "what is frontend and fullstack development",
+      "explain frontend and fullstack development"
+    ],
+    "category": "web development"
+  },
+  {
+    "question": "what is angular js",
+    "category": "web development"
+  },
+  {
+    "question": "what is node js",
+    "category": "web development"
+  },
+  {
+    "question": "what is node machine learning",
+    "category": "programming"
+  },
+  {
+    "question": "what is object oriented programming",
+    "category": "programming"
+  },
+  {
+    "question": "why object oriented programming",
+    "category": "programming"
+  },
+  {
+    "question": "which language is best for object oriented programming",
+    "category": "programming"
+  },
+  {
+    "question": "why python used for machine learning",
+    "category": "programming"
+  },
+  {
+    "question": "which python framework is best for machine learning",
+    "category": "programming"
+  },
+  {
+    "question": "which python library is used for machine learning",
+    "category": "programming"
+  },
+  {
+    "question": "what is c++",
+    "category": "programming"
+  },
+  {
+    "question": "what is artificial intelligence",
+    "category": "programming"
+  },
+  {
+    "question": "why artificial intelligence",
+    "category": "programming"
+  },
+  {
+    "question": "which language is best for using artificial intelligence",
+    "category": "programming"
+  },
+  {
+    "question": "what is visual studio code",
+    "category": "programming"
+  },
+  {
+    "question": "why visual studio code",
+    "category": "programming"
+  },
+  {
+    "question": "visual studio code",
+    "category": "programming"
+  },
+  {
+    "question": "which visual studio code version is better",
+    "category": "programming"
+  },
+  {
+    "question": "why most developers use visual studio code",
+    "category": "programming"
+  },
+  {
+    "question": "why most developers use visual studio code",
+    "category": "programming"
+  },
+  {
+    "question": "what is natural language processing",
+    "category": "programming"
+  },
+  {
+    "question": "what is the purpose of natural language processing",
+    "category": "programming"
+  },
+  {
+    "question": "how to learn natural language processing",
+    "category": "programming"
+  },
+  {
+    "question": "which programming language best for natural language processing",
+    "category": "programming"
+  },
+  {
+    "question": "which is the best library for natural language processing",
+    "category": "programming"
+  },
+  {
+    "question": "what is cloud native development",
+    "category": "programming"
+  },
+  {
+    "question": "what is the purpose of cloud native development",
+    "category": "programming"
+  },
+  {
+    "question": "why cloud native development is very popular",
+    "category": "programming"
+  },
+  {
+    "question": "which programming language is best for cloud native development",
+    "category": "programming"
+  },
+  {
+    "question": "what is the importance of cloud native development",
+    "category": "programming"
+  },
+  {
+    "question": "cloud native development",
+    "category": "programming"
+  },
+  {
+    "question": "what is data science",
+    "category": "programming"
+  },
+  {
+    "question": "why data science is very important",
+    "category": "programming"
+  },
+  {
+    "question": "how to learn data science",
+    "category": "programming"
+  },
+  {
+    "question": "explain data science",
+    "category": "programming"
+  },
+  {
+    "question": "how many languages used in cloud native development",
+    "category": "programming"
+  },
+  {
+    "question": "what kind of programming languages is best for cloud native development",
+    "category": "programming"
+  },
+  {
+    "question": "how to learn artificial intelligence",
+    "category": "programming"
+  },
+  {
+    "question": "what is go language?",
+    "category": "programming"
+  },
+  {
+    "question": "why use go language",
+    "category": "programming"
+  },
+  {
+    "question": "go",
+    "category": "programming"
+  },
+  {
+    "question": "go is best for backend development",
+    "category": "programming"
+  },
+  {
+    "question": "i love you",
+    "category": "personal"
+  },
+  {
+    "question": "do you love me",
+    "category": "personal"
+  },
+  {
+    "question": "i love you most",
+    "category": "personal"
+  },
+  {
+    "question": "how can i love you",
+    "category": "personal"
+  },
+  {
+    "question": "what is love",
+    "category": "personal"
+  },
+  {
+    "question": "how make love",
+    "category": "personal"
+  },
+  {
+    "question": "love",
+    "category": "personal"
+  },
+  {
+    "question": "what is cybersecurity",
+    "category": "programming"
+  },
+  {
+    "question": "why cybersecurity",
+    "category": "programming"
+  },
+  {
+    "question": "importance of cybersecurity",
+    "category": "programming"
+  },
+  {
+    "question": "which is the best python framework",
+    "category": "programming"
+  },
+  {
+    "question": "what is test driven development",
+    "category": "programming"
+  },
+  {
+    "question": "which is test driven development",
+    "category": "programming"
+  },
+  {
+    "question": "Which is the test driven development approach?",
+    "category": "programming"
+  },
+  {
+    "question": "Why is test driven development considered beneficial for software development?",
+    "category": "programming"
+  },
+  {
+    "question": "What types of tests are typically written during test driven development?",
+    "category": "programming"
+  },
+  {
+    "question": "What is tensorflow project",
+    "category": "programming"
+  },
+  {
+    "question": "Why tensorflow use most ai projects?",
+    "category": "programming"
+  },
+  {
+    "question": "What is the use of tensorflow",
+    "category": "programming"
+  },
+  {
+    "question": "What is game development?",
+    "category": "programming"
+  },
+  {
+    "question": "What are the key components of a video game?",
+    "category": "programming"
+  },
+  {
+    "question": "How is gameplay design important in game development?",
+    "category": "programming"
+  },
+  {
+    "question": "What programming languages are commonly used in game development?",
+    "category": "programming"
+  },
+  {
+    "question": "What are game assets and how do they contribute to the game development process?",
+    "category": "programming"
+  },
+  {
+    "question": "What is jwt",
+    "category": "programming"
+  },
+  {
+    "question": "What are jwt",
+    "category": "programming"
+  },
+  {
+    "question": "Why jwt ?",
+    "category": "programming"
+  },
+  {
+    "question": "how to use jwt",
+    "category": "programming"
+  },
+  {
+    "question": "what is pytorch",
+    "category": "programming"
+  },
+  {
+    "question": "what are pytorch",
+    "category": "programming"
+  },
+  {
+    "question": "pytorch?",
+    "category": "programming"
+  },
+  {
+    "question": "what is flutter",
+    "category": "programming"
+  },
+  {
+    "question": "what are the benefits of flutter",
+    "category": "programming"
+  },
+  {
+    "question": "why most developers use flutter",
+    "category": "programming"
+  },
+  {
+    "question": "flutter",
+    "category": "programming"
+  },
+  {
+    "question": "what is bearer token",
+    "category": "programming"
+  },
+  {
+    "question": "what most developers use bearer token for authentication",
+    "category": "programming"
+  },
+  {
+    "question": "what are the benefits bearer token",
+    "category": "programming"
+  },
+  {
+    "question": "bearer token",
+    "category": "programming"
+  },
+  {
+    "question": "what is amazon dynamodb?",
+    "category": "programming"
+  },
+  {
+    "question": "how does amazon dynamodb handle scalability?",
+    "category": "programming"
+  },
+  {
+    "question": "what data models does amazon dynamodb support?",
+    "category": "programming"
+  },
+  {
+    "question": "what security features does dynamodb provide?",
+    "category": "programming"
+  },
+  {
+    "question": "does amazon dynamodb have a free tier for developers?",
+    "category": "programming"
+  },
+  {
+    "question": "dynamodb ?",
+    "category": "programming"
+  },
+  {
+    "question": "amazon dynamodb",
+    "category": "programming"
+  },
+  {
+    "question": "amazon dynamodb",
+    "category": "programming"
+  }
+
+]
